@@ -147,3 +147,33 @@ function divide(divisor, ...dividends) {
 
 var arr = divide(10, 100, 1000, 10000); 
 console.log(arr); // [10, 100, 1000]
+
+/*-------------------------------------------ES6 Template strings and Tagged Templates-----------------------------*/
+//Template strings
+var name  = Rehana;
+var surname = van Schalkwyk;
+console.log(`Hi my name is ${name} ${surname}.`); "Hi my name is Rehana van Schalkwyk."
+
+var a = 20;
+var b = 10;
+console.log(`Thrity is ${a + b} and\nnot ${2 * a + b}.`);//"Thrity is 30 and 
+														 //not 60."
+//Tagged Templates
+var num1 = 5;
+var num2 = 10;
+
+function Read(strings, ...values) {
+  console.log(strings[0]); 
+  console.log(strings[1]); 
+  console.log(values[0]);  
+console.log(values[1]);
+  return "Complete!";
+}
+
+var success = Read`Hello ${ num1 + num2 } world ${ num2 - num1}`;
+console.log(success);
+//Hello world 15 10 
+// "Complete!"											
+
+
+/*-----------------------------------------------------End---------------------------------------------------------*/
