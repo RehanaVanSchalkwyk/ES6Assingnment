@@ -118,7 +118,7 @@ let { [key]: magicWord } = { d: "open" };
 console.log(magicWord); // "open"
 
 /*-------------------------------------------ES6 Spread operator, rest parameters---------------------------------*/
-
+//Spread operator
 var missingParts = ['two', 'three'];
 var numberList = ['one', ...missingParts, 'four', 'five']; 
 console.log(numberList)// one, two, three, four, five
@@ -127,3 +127,23 @@ var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1.push(...arr2);
 console.log(arr1); // 012345
+
+//Rest Parameters
+function arrayLength(...theArgs) {
+  console.log(theArgs.length);
+}
+
+arrayLength();  // 0
+arrayLength(10); // 1
+arrayLength(4, 5, 6); // 3
+
+
+
+function divide(divisor, ...dividends) {
+  return dividends.map(function (dividend) {
+    return dividend / divisor;
+  });
+}
+
+var arr = divide(10, 100, 1000, 10000); 
+console.log(arr); // [10, 100, 1000]
